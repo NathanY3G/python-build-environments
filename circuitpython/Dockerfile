@@ -16,7 +16,7 @@ COPY gcc-arm-none-eabi-${TOOLCHAIN_VERSION}-x86_64-linux.tar.bz2 /opt/gcc-arm-no
 RUN tar --directory=/opt -xjf /opt/gcc-arm-none-eabi.tar.bz2
 
 # Install Python dependencies
-RUN pip3 install --user huffman \
+RUN pip3 install huffman \
     cascadetoml jinja2 typer \
     requests requests-cache sh 'click<8' setuptools cpp-coveralls \
     'Sphinx<4' sphinx-rtd-theme myst-parser sphinx-autoapi sphinxcontrib-svg2pdfconverter readthedocs-sphinx-search \
