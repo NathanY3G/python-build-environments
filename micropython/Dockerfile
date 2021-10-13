@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: Copyright 2021 Nathan Young
 #
 # SPDX-License-Identifier: Apache-2.0
-FROM debian:bullseye-20210902-slim
+FROM debian:bullseye-20211011-slim
 
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install -y build-essential cmake git python3 wget
