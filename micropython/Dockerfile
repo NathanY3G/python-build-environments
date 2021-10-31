@@ -4,7 +4,11 @@
 FROM debian:bullseye-20211011-slim
 
 ENV DEBIAN_FRONTEND=noninteractive
-RUN apt-get update && apt-get install -y build-essential cmake git python3 wget
+RUN apt-get update && apt-get install -y apt-utils \
+    build-essential autoconf libtool pkg-config cmake \
+    git wget \
+    python3 python3-pip \
+    libffi-dev
 
 ARG TOOLCHAIN_VERSION=10.3-2021.07
 
