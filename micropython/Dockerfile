@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: Copyright 2021 Nathan Young
 #
 # SPDX-License-Identifier: Apache-2.0
-FROM debian:bullseye-20220316-slim
+FROM debian:bullseye-20220509-slim
 
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install -y apt-utils \
