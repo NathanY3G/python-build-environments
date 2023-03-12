@@ -1,12 +1,12 @@
 # SPDX-FileCopyrightText: Copyright 2021 Nathan Young
 #
 # SPDX-License-Identifier: Apache-2.0
-FROM debian:bullseye-20221004-slim
+FROM debian:bullseye-20230227-slim
 
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install -y gettext git make python3 python3-pip uncrustify wget
 
-ARG TOOLCHAIN_VERSION=10.3-2021.07
+ARG TOOLCHAIN_VERSION=10.3-2021.10
 
 # Install the GNU Arm Embedded Toolchain
 COPY gcc-arm-none-eabi-${TOOLCHAIN_VERSION}-x86_64-linux.tar.bz2 /opt/gcc-arm-none-eabi.tar.bz2
