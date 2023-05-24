@@ -1,7 +1,7 @@
-# SPDX-FileCopyrightText: Copyright 2021 Nathan Young
+# SPDX-FileCopyrightText: Copyright 2021-2023 Nathan Young
 #
 # SPDX-License-Identifier: Apache-2.0
-FROM debian:bullseye-20230411-slim
+FROM debian:bullseye-20230502-slim
 
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install -y gettext git make python3 python3-pip uncrustify wget
