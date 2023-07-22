@@ -5,9 +5,9 @@ FROM debian:bullseye-20230703-slim
 
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install -y apt-utils \
+    bzip2 git git-lfs wget \
     build-essential autoconf libtool pkg-config cmake \
-    git wget \
-    python3 python3-pip \
+    python3 \
     libffi-dev
 
 ARG TOOLCHAIN_VERSION=10.3-2021.10
@@ -19,6 +19,7 @@ COPY gcc-arm-none-eabi-${TOOLCHAIN_VERSION}-x86_64-linux.tar.bz2 /opt/gcc-arm-no
 
 RUN tar --directory=/opt -xjf /opt/gcc-arm-none-eabi.tar.bz2
 
+# Switch to a lower privileged / non-root user account
 ARG USER_ID=1234
 ARG GROUP_ID=1234
 
