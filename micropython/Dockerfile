@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: Copyright 2021-2023 Nathan Young
 #
 # SPDX-License-Identifier: Apache-2.0
-FROM debian:bookworm-20240130-slim
+FROM debian:bookworm-20240211-slim
 
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install -y apt-utils \
